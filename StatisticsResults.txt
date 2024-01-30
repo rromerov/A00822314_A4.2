@@ -3,3 +3,4 @@ Median: 6.75
 Mode: 10.0
 Standard deviation: 2.836701429477554
 Variance: 8.046875
+Execution time: 0.0009677410125732422 seconds
