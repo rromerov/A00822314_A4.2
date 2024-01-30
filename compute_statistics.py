@@ -1,5 +1,5 @@
 import time
-from utilities.dataLoader import txtLoader
+from utilities.data_loader import txtLoader
 from utilities.statistics import statistics
 
 start_time = time.time()
@@ -21,5 +21,3 @@ print(results)
 
 with open('StatisticsResults.txt', 'w') as output:
     print(results, file=output)
-
-
