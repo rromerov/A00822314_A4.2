@@ -1,12 +1,15 @@
+"""
+Module to compute statistics on a set of numbers loaded from a text file.
+"""
 import time
-from utilities.data_loader import txtLoader
-from utilities.statistics import statistics
+from utilities.data_loader import txt_loader
+from utilities.statistics import Statistics
 
 start_time = time.time()
 
-numbers = txtLoader()
+numbers = txt_loader()
 
-measures = statistics(numbers)
+measures = Statistics(numbers)
 
 end_time = time.time()
 
@@ -19,5 +22,5 @@ results = (f'Mean: {measures.mean()}\n'
 
 print(results)
 
-with open('StatisticsResults.txt', 'w') as output:
+with open('StatisticsResults.txt', 'w', encoding='utf-8') as output:
     print(results, file=output)
