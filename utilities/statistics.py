@@ -2,6 +2,7 @@
 Module containing a class for statistical operations.
 """
 
+
 class Statistics:
     """
     A class for performing statistical operations on data.
@@ -43,7 +44,7 @@ class Statistics:
         Calculate the mode of the data.
 
         Returns:
-            float or str: The mode value of the data, or a message "N/A" if there is no mode.
+            float or str: The mode of the data, or N/A if there is no mode.
         """
         counts = {}
         for x in self.data:
@@ -57,7 +58,6 @@ class Statistics:
                 return mode_value
             return "N/A"
         return "N/A"
-
 
     def standard_deviation(self):
         """
