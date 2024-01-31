@@ -1,5 +1,5 @@
-astroid==3.0.2
 cfgv==3.4.0
+astroid==3.0.2
 colorama==0.4.6
 dill==0.3.8
 distlib==0.3.8
