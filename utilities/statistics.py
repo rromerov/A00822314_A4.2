@@ -52,11 +52,14 @@ class Statistics:
                 counts[x] += 1
             else:
                 counts[x] = 1
-        if counts:
-            mode_value = max(counts, key=counts.get)
-            if list(counts.values()).count(counts[mode_value]) == 1:
-                return mode_value
-            return "N/A"
+
+        max_count = max(counts.values())
+        modes = [x for x, count in counts.items() if count == max_count]
+
+        if len(modes) == 1:
+            return modes[0]
+        if len(modes) > 1:
+            return repr(modes)[1:-1].replace(',', '')
         return "N/A"
 
     def standard_deviation(self):
@@ -77,7 +80,7 @@ class Statistics:
             float: The variance of the data.
         """
         mean = self.mean()
-        return sum((x - mean)**2 for x in self.data) / len(self.data)
+        return sum((x - mean) ** 2 for x in self.data) / len(self.data)
 
     def valid_count(self):
         """
