@@ -28,6 +28,7 @@ for i, (decimal, binary, hexadecimal) in enumerate(
 print(results)
 
 execution_time = time.time() - start_time
+
 print(f'Execution time: {execution_time:.2f} seconds')
 
 with open('ConvertionResults.txt', 'w', encoding='utf-8') as output:

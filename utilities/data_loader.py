@@ -69,3 +69,40 @@ def int_loader():
             # Add the number to the list
             numbers.append(value)
     return numbers
+
+
+def str_loader():
+    """
+    Loads data from a text file.
+
+    Args:
+        file_name (str): Name of the text file.
+
+    Returns:
+        list: A list containing valid strings from the file.
+    """
+    if len(sys.argv) < 2:
+        print('No file name given. To run the script, type: python'
+              'word_count.py <fileName.txt>')
+        sys.exit(1)
+
+    file = sys.argv[1]
+    words = []
+    try:
+        with open(file, 'r', encoding='utf-8') as processed_file:
+            for line_number, line in enumerate(processed_file, start=1):
+                # Remove the new line character and trailing whitespaces
+                line = line.strip()
+
+                # Check if line is empty after stripping
+                if not line:
+                    print(f'Warning: Empty line found at line {line_number}')
+                    continue
+
+                # Add the string to the list
+                words.append(line)
+    except FileNotFoundError:
+        print(f'Error: File "{file}" not found.')
+        return []
+
+    return words
