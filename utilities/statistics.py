@@ -78,3 +78,12 @@ class Statistics:
         """
         mean = self.mean()
         return sum((x - mean)**2 for x in self.data) / len(self.data)
+
+    def valid_count(self):
+        """
+        Count the number of elements in the data.
+
+        Returns:
+            int: The number of elements in the data.
+        """
+        return len(self.data)

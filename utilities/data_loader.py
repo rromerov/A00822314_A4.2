@@ -5,7 +5,7 @@ Module to load data from a text file.
 import sys
 
 
-def txt_loader():
+def float_values_loader():
     """
     Loads numeric data from a text file provided as a command-line argument.
 
@@ -19,6 +19,7 @@ def txt_loader():
 
     file = sys.argv[1]
     numbers = []
+    not_numbers = []
     with open(file, 'r', encoding='utf-8') as processed_file:
         for line in processed_file:
 
@@ -26,16 +27,17 @@ def txt_loader():
             line = line.strip()
 
             try:
-                # Convert the string to a float
+                # Convert the string to a float if possible
                 value = float(line)
+                numbers.append(value)
+
             except ValueError:
                 # If the string can't be converted to a float, ignore it
+                not_numbers.append(line)
                 print(f'The following element is not a number: {line}')
                 continue
 
-            # Add the number to the list
-            numbers.append(value)
-    return numbers
+    return numbers, not_numbers
 
 
 def int_loader():
