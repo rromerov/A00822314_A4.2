@@ -3,12 +3,12 @@ Module to compute statistics on a set of numbers loaded from a text file.
 """
 import time
 from prettytable import PrettyTable
-from utilities.data_loader import float_values_loader
+from utilities.data_loader import stadistic_data
 from utilities.statistics import Statistics
 
 start_time = time.time()
 
-numbers, not_numbers = float_values_loader()
+numbers, not_numbers = stadistic_data()
 
 measures = Statistics(numbers)
 

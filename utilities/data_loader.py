@@ -5,7 +5,7 @@ Module to load data from a text file.
 import sys
 
 
-def float_values_loader():
+def stadistic_data():
     """
     Loads numeric data from a text file provided as a command-line argument.
 
@@ -40,7 +40,7 @@ def float_values_loader():
     return numbers, not_numbers
 
 
-def int_loader():
+def converter_data():
     """
     Loads integer data from a text file provided as a command-line argument.
 
@@ -73,7 +73,7 @@ def int_loader():
     return numbers
 
 
-def str_loader():
+def word_data():
     """
     Loads data from a text file.
 

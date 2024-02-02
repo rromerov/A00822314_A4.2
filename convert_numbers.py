@@ -3,12 +3,12 @@ Module to convert decimal numbers to binary and hexadecimal from a text file.
 """
 import time
 from prettytable import PrettyTable
-from utilities.data_loader import int_loader
+from utilities.data_loader import converter_data
 from utilities.converter import Converter
 
 start_time = time.time()
 
-decimals = int_loader()
+decimals = converter_data()
 
 conversions = Converter(decimals)
 

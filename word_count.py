@@ -4,12 +4,12 @@ the results to a text file and the console.
 """
 import time
 from prettytable import PrettyTable
-from utilities.data_loader import str_loader
+from utilities.data_loader import word_data
 from utilities.word_counter import WordCounter
 
 start_time = time.time()
 
-words = str_loader()
+words = word_data()
 
 count_words = WordCounter(words)
 
@@ -29,5 +29,4 @@ end_result = f'{results}\n{number_of_words}\n{execution_time}'
 print(end_result)
 
 with open('WordCountResults.txt', 'w', encoding='utf-8') as output:
-    output_content = end_result
-    output.write(output_content)
+    output.write(end_result)
