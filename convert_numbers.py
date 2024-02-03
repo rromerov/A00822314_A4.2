@@ -1,6 +1,7 @@
 """
 Module to convert decimal numbers to binary and hexadecimal from a text file.
 """
+# Import libraries
 import time
 from prettytable import PrettyTable
 from utilities.data_loader import converter_data
