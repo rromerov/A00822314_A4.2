@@ -36,9 +36,13 @@ class WordCounter:
             dict: A dictionary where keys are words and values are their
             counts.
         """
+        # Initialize an empty dictionary to store the word count
         word_count = {}
+        # Iterate over each word in the provided list
         for word in self.data:
+            # Increase the count of the current word in the word_count dict
             word_count[word] = word_count.get(word, 0) + 1
+        # Return the resulting word count dictionary
         return word_count
 
     def __iter__(self):
