@@ -20,22 +20,26 @@ def stadistic_data():
     file = sys.argv[1]
     numbers = []
     not_numbers = []
-    with open(file, 'r', encoding='utf-8') as processed_file:
-        for line in processed_file:
+    try:
+        with open(file, 'r', encoding='utf-8') as processed_file:
+            for line in processed_file:
 
-            # Remove the new line character
-            line = line.strip()
+                # Remove the new line character
+                line = line.strip()
 
-            try:
-                # Convert the string to a float if possible
-                value = float(line)
-                numbers.append(value)
+                try:
+                    # Convert the string to a float if possible
+                    value = float(line)
+                    numbers.append(value)
 
-            except ValueError:
-                # If the string can't be converted to a float, ignore it
-                not_numbers.append(line)
-                print(f'The following element is not a number: {line}')
-                continue
+                except ValueError:
+                    # If the string can't be converted to a float, ignore it
+                    not_numbers.append(line)
+                    print(f'The following element is not a number: {line}')
+                    continue
+    except FileNotFoundError:
+        print(f'Error: File "{file}" not found.')
+        return [], []
 
     return numbers, not_numbers
 
@@ -54,22 +58,27 @@ def converter_data():
 
     file = sys.argv[1]
     numbers = []
-    with open(file, 'r', encoding='utf-8') as processed_file:
-        for line in processed_file:
+    try:
+        with open(file, 'r', encoding='utf-8') as processed_file:
+            for line in processed_file:
 
-            # Remove the new line character
-            line = line.strip()
+                # Remove the new line character
+                line = line.strip()
 
-            try:
-                # Convert the string to an integer
-                value = int(line)
-            except ValueError:
-                # If the string can't be converted to an integer, ignore it
-                print(f'The following element is not a number: {line}')
-                value = line
+                try:
+                    # Convert the string to an integer
+                    value = int(line)
+                except ValueError:
+                    # If the string can't be converted to an integer, ignore it
+                    print(f'The following element is not a number: {line}')
+                    value = line
 
-            # Add the number to the list
-            numbers.append(value)
+                # Add the number to the list
+                numbers.append(value)
+    except FileNotFoundError:
+        print(f'Error: File "{file}" not found.')
+        return []
+
     return numbers
 
 
