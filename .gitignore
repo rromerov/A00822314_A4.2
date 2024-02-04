@@ -2,3 +2,4 @@ utilities/__pycache__
 *.txt
 !requirements.txt
 __pycache__
+!P*.txt
