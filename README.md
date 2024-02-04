@@ -40,9 +40,9 @@ Donde `fileWithData.txt` es el archivo con los datos a analizar.
 
 El requerimento 4 pedía que el archivo se nombrará `wordCount.py`, pero para seguir la convención de nombrar los archivos con minúsculas y separar las palabras con guiones bajos, se nombró como `word_count.py`, de acuerdo con el requerimiento 8 de que cumpla con PEP8, donde se menciona que se usará CamelCase si el proyecto en primera instancia fue creado con ese estilo de escritura en un principio, de lo contrario se debe usar Snake case.
 
-[!IMPORTANT]
-Se creó un subdirectorio llamado **utilities** donde se encuentran archivos usados por los scripts principales. Tal es el caso de `data_loader.py` que se encarga de cargar los datos de un archivo **.txt**, así como `statistics.py` usado para calcular las estadísticas descriptivas de los datos, además de `converter.py`para convertir los números en formato decimal dentro de una lista a binarios y hexadecimales, y por último `word_counter.py` que cuenta el número de veces que una palabra se repite en una lista.
+> [!IMPORTANT]  
+> Se creó un subdirectorio llamado **utilities** donde se encuentran archivos usados por los scripts principales. Tal es el caso de `data_loader.py` que se encarga de cargar los datos de un archivo **.txt**, así como `statistics.py` usado para calcular las estadísticas descriptivas de los datos, además de `converter.py`para convertir los números en formato decimal dentro de una lista a binarios y hexadecimales, y por último `word_counter.py` que cuenta el número de veces que una palabra se repite en una lista.
 
-[!NOTE]
-El repositorio cuenta con un pipeline de CI/CD que se encarga de asegurar que tanto pylint como flake8 pasen exitosamente.
+> [!NOTE]  
+> El repositorio cuenta con un pipeline de CI/CD que se encarga de asegurar que tanto pylint como flake8 pasen exitosamente.
 
