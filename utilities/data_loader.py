@@ -39,7 +39,7 @@ def stadistic_data():
                     continue
     except FileNotFoundError:
         print(f'Error: File "{file}" not found.')
-        return [], []
+        sys.exit(1)
 
     return numbers, not_numbers
 
@@ -77,7 +77,7 @@ def converter_data():
                 numbers.append(value)
     except FileNotFoundError:
         print(f'Error: File "{file}" not found.')
-        return []
+        sys.exit(1)
 
     return numbers
 
@@ -114,6 +114,6 @@ def word_data():
                 words.append(line)
     except FileNotFoundError:
         print(f'Error: File "{file}" not found.')
-        return []
+        sys.exit(1)
 
     return words
